@@ -1,0 +1,289 @@
+city,ward_name,facility_type,facility_name,address,beds
+Mumbai,A,Govt,"Gokuldas Tejpal Hospital, Fort","Chhatrapati Shivaji Terminus Area, Fort",621
+Mumbai,A,BMC,ENT Hospital,"Maharshi Dadhichi Marg, Azad Maidan",100
+Mumbai,A,Govt,St George Hospital,"Chhatrapati Shivaji Terminus Area, Fort",467
+Mumbai,A,Govt,Cama & Albless Hospital,"Dhobi Talao, Chhatrapati Shivaji Terminus Area",505
+Mumbai,A,Defence,INS Ashwini Hospital,"Navy Nagar, Colaba,",101
+Mumbai,A,Private,Bombay Hospital,"Near Liberty Cinema, New Marine Lines,",732
+Mumbai,A,Private,Indu Clinic,"Wodehouse Road, Colaba",12
+Mumbai,B,Private,Noor Hospital,Masjid Bunder,92
+Mumbai,B,Private,Habib Hospital,"Jail Road, Near Imam Husain Chowk",76
+Mumbai,B,Private,Dholkawala Maternity and Nursing Home,"Mohammed Ali Rd, Masjid Bandar",25
+Mumbai,B,Private,M H Saboo Siddique Hospital,"Imamwada Road, Opp. Mughal Masjid",95
+Mumbai,B,Private,Haji Karim Maternity and Child Care,"Mohammed Ali Rd, Masjid Banda",14
+Mumbai,D,Private,Breach Candy Hospital Trust,"Breach Candy, Cumballa Hill",213
+Mumbai,D,Private,Bhatia Hospital Multidisciplinary,"Tardeo Road,",155
+Mumbai,D,Private,Jaslok Hospital & Research Centre,"IT Colony, Tardeo",448
+Mumbai,D,Private,Saifee Hospital,"15/17, Maharshi Karve Rd, opposite Charni Road, Charni Road East",254
+Mumbai,D,Private,Sir H.N.Hospital & Research Centre,Girgaon,350
+Mumbai,D,Private,The B.D.Petit Parsee Gen Hosp,"Bomanji Petit Marg, Cumballa Hill",220
+Mumbai,D,Private,Apollo Speciaity Hospitals Pvt Ltd,"Behind Everest Building, Tardeo",24
+Mumbai,D,Private,Bay-View Clinic,,22
+Mumbai,D,Private,Beramji's Hospital,,32
+Mumbai,D,Private,Bombay City Eye Institute And Research Centre,,3
+Mumbai,D,Private,Bombay Maternity And Nursing Home,,12
+Mumbai,D,Private,Brahman Sabha Mhaskar Sutika Gruha & Gen N,,41
+Mumbai,D,Private,Chowpatty Maternity & Gyn Hospital,,15
+Mumbai,D,Private,Comfort Clinic Nursing Home,,8
+Mumbai,D,Private,Conwest Jain Clinic Group Of Hosp,,94
+Mumbai,D,Private,Cumballa Hill Hospital & Heart Inst,,53
+Mumbai,D,Private,Dr Amonkar Hospital-Managed By P Patil Nurs. Home,,15
+Mumbai,D,Private,Dr Duru Shah Gynaec World,,5
+Mumbai,D,Private,Dr Gala's Nursing Home,,2
+Mumbai,D,Private,Dr Garg Medical Centre,,3
+Mumbai,D,Private,Dr H D Gandhi Memorial Hospital,,10
+Mumbai,D,Private,Dr Pathak Nursing Home,,3
+Mumbai,D,Private,Dr Vora's Maternity And Gynaecological Hosp,,5
+Mumbai,D,Private,Dr Vora's Nursing Home,,5
+Mumbai,D,Private,Dr. N K Shah One Day Surgery Centre,,15
+Mumbai,D,Private,Drushti Eye & Retina Centre,,14
+Mumbai,D,Private,Fauziya Maternity & Nursing Home,,24
+Mumbai,D,Private,Foresight Eye Centre,,3
+Mumbai,D,Private,Healing Hands Nursing Home,,9
+Mumbai,D,Private,Hospital For Women Care Maternity And Gynaec Hosp,,7
+Mumbai,D,Private,Infiniti Eye Hospital,,6
+Mumbai,D,Private,Inkus Ivf Centre,,7
+Mumbai,D,Private,Joshi Nursing Home,,6
+Mumbai,D,Private,Kamala Polyclinic & Nusing Home,,10
+Mumbai,D,Private,Mehta Clinic,,5
+Mumbai,D,Private,Motiben B Dalvi Hospital,,57
+Mumbai,D,Private,Narvekar Clinic,,10
+Mumbai,D,Private,Nicholson Eye Clinic,,3
+Mumbai,D,Private,Nisar Eye Hospital,,2
+Mumbai,D,Private,Pai-Dhungat Nursing Home,,9
+Mumbai,D,Private,Punjani Nursing Home,,6
+Mumbai,D,Private,SP Nursing Home And Polyclinic,,4
+Mumbai,D,Private,Sadhu-Kamal Eye Hospital,,2
+Mumbai,D,Private,Shah Eye Clinic & Nursing Home,,2
+Mumbai,D,Private,St Elizabeth's Hospital,,100
+Mumbai,D,Private,Ruxmani Lying-In Hospital,,25
+Mumbai,D,Private,VADT Nursing Home,,16
+Mumbai,D,Private,Vasani Eye Clinic/Eyes Rvs,,3
+Mumbai,D,Private,Vital Diagnostic Centre And Nursing Home,,15
+Mumbai,D,Private,Yogeshwar Surgical Nursing Home,,11
+Mumbai,D,Private,Fertility Clinic,,4
+Mumbai,D,Private,Vascular Clinic,,2
+Mumbai,E,Municipal,Kasturba Hospital,"Sane Guruji Marg, Arya Nagar, Chinchpokli",515
+Mumbai,E,Municipal,BYL Nair Hospital,"Topiwala National Medical College, RTO Colony, Mumbai Central",1229
+Mumbai,E,Govt,JJ Hospital,"J J Marg, Nagpada-Mumbai Central",1352
+Mumbai,E,Govt,"Ambedkar Hospital (Central Railway Hospital), Byculla","Dr. Baba Saheb Ambedkar Road, Byculla East",366
+Mumbai,E,Govt,"Jagjivanram Hospital, Western Rly","Maratha Mandir Marg, RBI Staff Colony, Mumbai Central",342
+Mumbai,E,Private,Prince Ali Khan Hospital,"Prince Ally Khan Hospital Rd, Tara Bagh, Mazgaon",153
+Mumbai,E,Private,Masina Hospital,"Sant Savata Mali Marg, near Byculla, Mustafa Bazar, Byculla",278
+Mumbai,E,Private,Kedar Hospital,"2nd Floor, Mazgaon Apartment, Mazgaon",10
+Mumbai,E,Private,"Balaji Hospital, Byculla (E)","Balaji House, 3rd Cross Lane, Victoria Road, Byculla East",100
+Mumbai,E,Private,Wockhardt Hospital,"Agripada, Mumbai Central",45
+Mumbai,F/N,Municipal,"Lokmanya Tilak Hospital, Sion","Dr. Babasaheb Ambedkar Road, Sion (West)",1422
+Mumbai,F/N,Private,Dr Shilpa Abhyankar Nursing Home,"Hindu Colony, Dadar East",3
+Mumbai,F/N,Private,Mata Laxmi Trust Hospital,"Tamil Sangh Hall, Sion East",21
+Mumbai,F/N,Private,Mumbai Bunder Port Trust,"Nadkarni Park, Wadala",241
+Mumbai,F/S,Municipal,King Edward Memorial (KEM) Hospital,"Acharya Donde Marg, Parel",2250
+Mumbai,F/S,Municipal,GTB Hospital,"Jerbai Wadia Marg, Sewri",1000
+Mumbai,F/S,Govt,Tata Memorial Hospital,"Dr Ernest Borges Rd, Parel East",469
+Mumbai,F/S,Govt,Mahatma Gandhi Memorial Hospital,"Dr SS Rao Marg, Parel East",120
+Mumbai,F/S,Private,Navroji Wadia Maternity Hospital,"Acharya Donde Marg, Parel East",450
+Mumbai,F/S,Private,Bai Jerbai Wadia Hospital For Children,"Acharya Donde Marg, Parel",525
+Mumbai,F/S,Private,Dr Gadre's Nursing & Maternity Hospital,"Govindji Keni Road, Dadar East",10
+Mumbai,F/S,Private,Sobti Hospital,"Ambedkar Road, Matunga East",11
+Mumbai,F/S,Private,Parel Hospital Pvt Ltd,"Jerbai Wadia Road, Parel",40
+Mumbai,F/S,Private,"Global Hospital, Parel","Dr Ernest Borges Rd, opp. Shirodkar High School, Parel East",245
+Mumbai,F/S,Private,Sewree Nursing Home,"Rafi Ahmed Kidwai Rd, Sewri West",20
+Mumbai,F/S,Private,"Desai Memorial Hospital, Parel","Parmar Guruji Marg, Parel East",13
+Mumbai,F/S,Private,"KB HB Charitable E N T Hospital, Parel","J Merwanji Street, Parel East,",45
+Mumbai,F/S,Private,"Life Care Nursing Home, Sewree","Rafi Ahmed Kidwai Rd, Sewri West",15
+Mumbai,F/S,Private,"Maru Hospital, Parel","Railway Chawl, Pare",26
+Mumbai,F/S,Private,Aryan Hospital & ICU,"Kalachowki, Ambawadi",17
+Mumbai,F/S,Private,"Ashvini Nursing & Maternity Home, Dadar (E)","Dadasaheb Phalke Road, Dadar East",6
+Mumbai,F/S,Private,"Dr B K Nadkarni Memorial Maternity & Surgical Hospital, Parel","Doctor BA Road, Aai Mai Merwanji St, Parel East",15
+Mumbai,F/S,Private,Sadguru Maternity & Nursing Home,"Dr Baba Saheb Ambedkar Rd, next to Chitra Cinema, Dadar East",5
+Mumbai,F/S,Private,Dr. Shivdikar Hospital,"Tata Mill Chawl, Parel East",16
+Mumbai,F/S,Private,Rakhumai Hospital,"Merwanji Road, Parel",15
+Mumbai,F/S,Private,Dr. Shanbaug Children Hospital,"Merwanji Road, Parel",3
+Mumbai,F/S,Private,Dr. Niranjn Unesh Joshi Nursing Home,Parel East,24
+Mumbai,F/S,Private,Sprash Children Hospital,"Acharya Donde Marg, Parel",26
+Mumbai,G/N,Private,Shushrusha Hospital,"Ranade Road, Dadar(W)",43
+Mumbai,G/N,Private,Dhanvantari Hospital,"Shivaji Park, Dadar West",18
+Mumbai,G/N,Private,Hinduja Hospital,"Near Shivaji Park, Mahim",337
+Mumbai,G/N,Private,Raheja Hospital,"Raheja Rugnalaya Marg, Mahim",180
+Mumbai,G/N,Private,Life Care Hospital,"Sion Bandra Link Road, Dharavi",52
+Mumbai,G/N,Private,Shobhana Nursing Home,"A.S Gaya Marg, Mahim",5
+Mumbai,G/N,Private,North Bombay Clinic,"Lady Jamshedji Rd, Mahim",10
+Mumbai,G/N,Private,Dr Prabhu Eye Clinic and Nursing Home,"Joshi Vadi, Mahim West",9
+Mumbai,G/N,Private,Citrus Nursing Home,"Sheshwadi, Dharavi",9
+Mumbai,G/N,Private,Dr Gandhi's Nursing Home Pvt Ltd,"NM Kale Marg, Dadar",23
+Mumbai,G/N,Private,Shree Nursing Home,"Pathare Prabhu Gokhale Road, Dadar West",53
+Mumbai,G/N,Private,Aayush Hospital,"90 Feet Road, Dharavi",60
+Mumbai,G/N,Private,Gupte Maternity Home,"Lt Dilip Gupte Marg, Mahim",16
+Mumbai,G/N,Private,Dr J M Purandare Hopsital,"Dr Madhukar B Raut Marg, Dadar West",17
+Mumbai,G/S,Trust,Tilak Hospital,"B.D.D Chawl, N.M Joshi Marg, Worli",40
+Mumbai,G/S,Govt,ESIS Hospital,"BDD Chawl, Worli",300
+Mumbai,G/S,Govt,Poddar Hospital,"Dr. Annie Besant Road, Worli",210
+Mumbai,G/S,Private,Siddhivinayak Health Care,"Khed Galli, Prabhadevi",15
+Mumbai,G/S,Private,"Parekh Nursing Home, Century Bazar","Adarsh Nagar, Prabhadevi",15
+Mumbai,G/S,Private,Sportsmed Mumbai Pvt Ltd,"Gokhale road, Parel West",16
+Mumbai,G/S,Private,JC Diagnostic Centre,"Ganapatrao Kadam Marg, Worli Naka",15
+Mumbai,G/S,Private,Asha Surgical & Maternity Home,Gyaneshwar Apartment New Prabhadevi Road,12
+Mumbai,G/S,Private,Dr. Punamiya Hospital,"near Tilak Bhavan, Dadar West",20
+Mumbai,G/S,Private,Priyank Nursing Home,"Sayani Rd, Prabhadevi",7
+Mumbai,G/S,Private,Worli Hospital for Women,"Dr. Annie Besant Rd, Worli",8
+Mumbai,G/S,Private,Nirmala Maternity & Surgical Hospital,"NM Joshi Marg, Subhash Nagar",25
+Mumbai,H/E,Municipal,V N Desai Municipal Gen Hospital,"Rd Number 11, Golibar, Santacruz East",276
+Mumbai,H/E,Govt,Urban Health Centre,"60 Feet Road, Dharavi",0
+Mumbai,H/E,Private,Asian Heart Institute & Research Centre,Bandra Kurla Complex,230
+Mumbai,H/E,Private,Guru Nanak Hospital & Research Centre,"Gandhi Nagar, Bandra East",120
+Mumbai,H/E,Private,Shivam Nursing Hospital,"Hari Mandir Road, Bandra East",18
+Mumbai,H/E,Private,Shakuntala Chitra Nursing Home,"Kherwadi, Bandra East",20
+Mumbai,H/E,Private,Agarwal Children Hospital,"Gandhi Nagar, Bandra East",15
+Mumbai,H/E,Private,M S Niron Hospital Pvt Ltd,"Vakola, Santacruz East",30
+Mumbai,H/E,Private,RK Hospital,"Near Railway Station Santacruz, Santacruz East",25
+Mumbai,H/E,Private,Sona Hospital,"Vakola Bridge, Santacruz East",15
+Mumbai,H/E,Private,Asha Pediatric Hospital,"Vidya Nagari, Kalina, Santacruz East",8
+Mumbai,H/E,Private,Wellcare Hospital,"Kalina, Santacruz East",18
+Mumbai,H/E,Private,Ashwin Maternity And Surgical Nursing Home,"Sen Nagar, Santacruz East",10
+Mumbai,H/E,Private,Astha Surgical Clinic,"Sen Nagar, Santacruz East",8
+Mumbai,H/E,Private,Dattatray Nursing Home,"Vakola, Santacruz East",25
+Mumbai,H/E,Private,Deepak Sheth Nursing Home,"Sen Nagar, Santacruz East",6
+Mumbai,H/E,Private,Durga Maternity Surgical Home,"Kolivery Village, Kalina",9
+Mumbai,H/E,Private,Laxmi Surgical Clinic & Nursing Home,"Kherwadi, Bandra East",10
+Mumbai,H/E,Private,M.S.Pallavi Maternity and Mothercare Centre,"Khernagar, Bandra East",6
+Mumbai,H/E,Private,M.S.Saideep Nursing Home,Santacruz East,4
+Mumbai,H/E,Private,Poojari Nursing Home,"Government Colony, Bandra East",10
+Mumbai,H/E,Private,Prashanti Medical Centre and Nursing Home,"Kalina, Santacruz East",10
+Mumbai,H/E,Private,Prathamesh Maternity and Nursing Home,"Gandhi Nagar, Bandra East",6
+Mumbai,H/E,Private,Prerna Nursing Home,"Gomes co-op housing society, Santacruz East",6
+Mumbai,H/E,Private,Pushpakunj Nursing Home,"Sen Nagar, Santacruz East",5
+Mumbai,H/E,Private,Raut Maternity Home,"Kalina village, Santacruz East",10
+Mumbai,H/E,Private,Sai Sanjeevani Hospital,"Shastri Colony, Santacruz East",18
+Mumbai,H/E,Private,Shastri Nursing Home,"Shanti Nagar, Vakola, Santacruz East",20
+Mumbai,H/E,Private,Sherekar Nursing Home,"Kalina, Santacruz East",8
+Mumbai,H/E,Private,Siddhi Nursing Home,"Sahar Road, Andheri East",5
+Mumbai,H/E,Private,Silver Coin Nursing Home,Vakola Pipeline Santacruz East,10
+Mumbai,H/E,Private,Upadhyay Nursing Home,"Moiz Apartment, 12th Rd, Santacruz East",11
+Mumbai,H/E,Private,Visual Eyez Clinic,"Kalina CHS, Santacruz East",1
+Mumbai,H/E,Private,M/s. Samarth Eye Care And Laser Centre,"Vakola, Santacruz East",4
+Mumbai,H/E,Private,Aastha Eye Care,"Old Anand Nagar, 4th Road, Santacruz East",2
+Mumbai,H/E,Private,Tanaya Nursing Home,"Jagat Vidya Marg, Bandra East",8
+Mumbai,H/E,Private,Sparsh Nursing Home,"7th Road, Khar, Golibar, Khar East",8
+Mumbai,H/W,Municipal,K B Bhabha Hospital,"Water Field Road, Bandra (W)",436
+Mumbai,H/W,Private,Lilavati Hospital,"Bandra Reclamation Rd, Bandra West",320
+Mumbai,H/W,Private,Holy Family Hospital,"Hill Road, Bandra West",232
+Mumbai,H/W,Private,Agrawal Nursing Home,"Ann Ville, Bandra West",16
+Mumbai,H/W,Private,Pali Nursing Home,"Manuel Gonsalves Rd, Bandra West",12
+Mumbai,H/W,Private,GM Medical Centre,"S.V. Road, Khar (W)",22
+Mumbai,H/W,Private,Mahavir Medical Research Centre,"Ahimsa Marg, Khar West",49
+Mumbai,H/W,Private,Dr. Gupte Surgical Hospital Ltd,"S V Road, Khar West",16
+Mumbai,H/W,Private,Shri Mangal Nursing Home,"Besant Rd, Santacruz West",22
+Mumbai,H/W,Private,Shanti Nursing Home,"Santosh Nagar, Bandra West",19
+Mumbai,H/W,Private,Surya Children's Nursing Home,"Swami Vivekananda Rd, Santacruz West",109
+Mumbai,H/W,Private,Mahatma Gandhi Seva Mandir,"S.V. Road, Bandra West",20
+Mumbai,K/E,Govt,ESIS Hospital,"MIDC, Andheri East",325
+Mumbai,K/E,Municipal,HBT (Thackeray) Trauma Care,"Sai Siddhi complex, Jogeshwari East",180
+Mumbai,K/E,Private,Seven Hills Hospital,"Marol,  Andheri East",350
+Mumbai,K/E,Private,Rainbow Women's Hospital,"Chakala, Andheri East",15
+Mumbai,K/E,Private,Dhanwantri Kerala Ayurved,"Chakala, Andheri East",0
+Mumbai,K/E,Private,Sanghvi Hospital,Lokhandwala Complex,2
+Mumbai,K/E,Private,Kiran Care & Cure Hospital,"JB Nagar, Andheri East",35
+Mumbai,K/E,Private,Holy Spirit Hospital,"Sher E Punjab Colony, Andheri East",161
+Mumbai,K/E,Private,Mangala Hospital,"Bamandaya pada, Andheri East",46
+Mumbai,K/E,Private,Sanjeevani Hospital,"Sahar Rd, Andheri East",17
+Mumbai,K/E,Private,Sir H N Reliance Hospital,"Raja Ram Mohan Roy Rd, Girgaon",10
+Mumbai,K/E,Private,Sugun Hospital,"Marol, Andheri East",35
+Mumbai,K/E,Private,All Cure Super Speciality Hospital,"Station Road, Jogeshwari East",45
+Mumbai,K/E,Private,Criticare Multi Speciality Hospital,"Teli Gali, Andheri East",45
+Mumbai,K/E,Private,Goel Hospital,"J B Nagar, Andheri East",43
+Mumbai,K/E,Private,Hashir Hospital,"Marol, Andheri East",20
+Mumbai,K/W,Municipal,BSES Municipal Gen Hospital,"Lohana Colony, Andheri West",100
+Mumbai,K/W,Municipal,Dr. R N Cooper Hospital,"JVPD Scheme, Juhu",700
+Mumbai,K/W,Private,Sanghvi Hospital,"Lokhandwala Complex, Andheri West",14
+Mumbai,K/W,Private,Cozy Clinic & Nursing Home,"Seven Bungalow, Andheri West",14
+Mumbai,L,Municipal,Dr Bhabha Hospital,"Waterfield Road, Bandra West",307
+Mumbai,L,Private,Arpan General Hospital,"Brahmanwadi, Kurla West",35
+Mumbai,L,Private,Dr. Zikruallah Khan Habib Hospital,"Lal Bahadur Shastri Marg, Kurla West",15
+Mumbai,L,Private,Neelam Nursing Home,"Lal Bahadur Shastri Marg, Kurla West",20
+Mumbai,L,Private,Kohinoor Hospital,"Lal Bahadur Shastri Marg, Kurla West",35
+Mumbai,L,Private,Aryan Hospital,"Nehru Nagar, Station Road, Kurla",25
+Mumbai,L,Private,Disha Hospital,"Bhagwat Bhavan Building, Kurla West",25
+Mumbai,L,Private,Paramount Nursing Home,"Andheri Kurla Road, Andheri East",55
+Mumbai,M/E,Municipal,Shatabdi Hospital,"Govandi East, Chembur",120
+Mumbai,M/E,Municipal,Maa Hospital,"Ramakrishna Chemburkar Marg, Chembur East",74
+Mumbai,M/E,Municipal,Deonar Maternity Home,"Deonar Municipal Colony, Govandi East",14
+Mumbai,M/E,Govt,RCF Hospital,"Aziz Baug, Chembur East",150
+Mumbai,M/E,Private,Noor Hospital,"Shivaji Nagar, Market Road, Govandi West",16
+Mumbai,M/E,Private,Nova Medical Centre,"Swastik Chamber,Chembur",16
+Mumbai,M/E,Private,Jagannath Maternity & Nursing Home,"Baiganwadi, Govandi East",12
+Mumbai,M/E,Private,Saibaba Nursing Home,Akurli Nagar,8
+Mumbai,M/E,Private,Meenaz Hospital,"Shivaji Nagar, Govandi West",7
+Mumbai,M/E,Private,Charu Nursing Home,"Azad Nagar, Chembur",8
+Mumbai,M/E,Private,Sandhya Nursing Home,"Gulab Park Colony, Chembur",14
+Mumbai,M/E,Private,Vikas Nursing Home,"Shivaji Nagar, Govandi West",10
+Mumbai,M/W,Municipal,Dr. Das Hospital,"Chembur Gaothan, Chembur",45
+Mumbai,M/W,Municipal,Inlaks General Hospital,"Indira Nagar, Chembur",94
+Mumbai,M/W,Municipal,Sushrut Hospital & Research Centre,"Swastik Park, Chembur (East)",70
+Mumbai,M/W,Govt,Kher Hospital,"Chembur Gaothan, Chembur",19
+Mumbai,M/W,Private,Mangal Anand Hospital,"Sion-Trombay Road, Chembur,",36
+Mumbai,M/W,Private,Dr. Sanjay Kedare Hospital,"DK Sandu Marg, Chembur",13
+Mumbai,M/W,Private,Ameeta Nursing Home,"Chembur Gaothan, Chembur",26
+Mumbai,M/W,Private,Amarnath Children Hospital,"Sion - Trombay Rd, Chembur",12
+Mumbai,M/W,Private,Ashirwad Hospital & Polyclinic,"Ghatla, Chembur",20
+Mumbai,M/W,Municipal,Matoshree Ramabai Ambedkar Maternity Home,"Postal Colony, Chembur",50
+Mumbai,M/W,Private,Disha Polyclinic & Nursing Home,"Opposite Bmc M Ward Office, Chembur",35
+Mumbai,M/W,Private,Kolekar Hospital,"Ambedkar Garden, Chembur",50
+Mumbai,M/W,Private,Lakshmi Maternity Home,"11th Rd, Sampoorna, Chembur",16
+Mumbai,M/W,Private,"Manju Nursing Home, Sindhi Society","Sindhi Society, Chembur",16
+Mumbai,M/W,Private,Markar Hospital,"Sanduwadi, Chembur",15
+Mumbai,M/W,Private,Shree Hosptial,"Ambedkar Garden, Chembur",22
+Mumbai,M/W,Private,Sunny Hospital,"Sunny Estate, Chembur",20
+Mumbai,M/W,Private,Swastik Hospital,"Swastik Park, Chembur",29
+Mumbai,N,Municipal,Rajawadi Hospital,"Rajawadi Colony, Ghatkopar East",596
+Mumbai,N,Municipal,Sant Muktabai Hospital,"Barve Nagar, Ghatkopar West",104
+Mumbai,N,Private,Sarvoday Hospital,"L B S Marg, Ghatkopar West",80
+Mumbai,N,Private,Nulife Hospital,"Jivdaya Lane, Ghatkopar West",47
+Mumbai,N,Private,Satyam Nursing Home,"L B S Marg, Ghatkopar West",29
+Mumbai,N,Private,Parekh Hospital,"Khokani Lane, Ghatkopar East",57
+Mumbai,N,Private,Pancholi Hospital,"Garodia Nagar, Ghatkopar East",24
+Mumbai,P/N,Municipal,M W Desai Hospital,"Lower Govind Nagar, Malad East",180
+Mumbai,P/N,Municipal,SK Patil Hospital,"Pushpa Park, Malad East",50
+Mumbai,P/N,Private,Veena Nursing Home,"Poddar Rd, Malad East",25
+Mumbai,P/N,Private,Raj Nursing Home,"Pushpa Park, Malad East",20
+Mumbai,P/N,Private,Ever Shine Nursing Home,"New Link Road, Malad West",25
+Mumbai,P/S,Municipal,"Siddharth Hospital, Goregaon (W)","Aarey Rd, Goregaon West",172
+Mumbai,P/S,Private,Gokuldham Medical Centre,"Gokuldham Colony, Goregaon",15
+Mumbai,P/S,Private,Vasudha Hospital,"Film City Road, Goregaon",10
+Mumbai,P/S,Private,Vaidya Hospital,"Film City Road, Goregaon",10
+Mumbai,P/S,Private,Life Line Medicare Hosp,"Gokuldham Medical Center, Goregaon East",15
+Mumbai,P/S,Private,Matoshree Gomati Hospital,"Mahatma Gandhi Road, Goregaon West",34
+Mumbai,R/N,Municipal,"Bhagwati Hospital, Borivali","Mandapeshwar, Borivali West",500
+Mumbai,R/N,Trust,Karuna Hospital,"LIC Colony Rd, Borivali West",156
+Mumbai,R/N,Private,Mandapeshwar Hospital,"Near Sudhir Phadke Flyover, Borivali West",21
+Mumbai,R/N,Private,Sanjeevani Hospital,"Near Ravindra Hotel, Dahisar",15
+Mumbai,R/N,Private,Gandhi Nursing Home,"Mandpeshwar Road, Borivali West",15
+Mumbai,R/N,Private,Silverline Hospital,"Mhatre Wadi, Dahisar West",11
+Mumbai,R/S,Municipal,Dr Babasaheb Ambedkar Hospital (Shatabdi Hospital),"Parekh Nagar, Kandivali West,",427
+Mumbai,R/S,Govt,ESIS Hospital,Kandivali,85
+Mumbai,R/S,Private,Mangalmurti Hospital,"Malwani Police Station Road, Malad West",25
+Mumbai,R/S,Private,Sanchaiti,"Akurli Rd, Kandivali",35
+Mumbai,R/C,Municipal,KCS Bansali Maternity Home,"Mhatre Wadi, Borivali West",40
+Mumbai,R/C,Municipal,Charkop Maternity Home,"Charkop Gaon, Kandivali West",20
+Mumbai,R/C,Municipal,Krantijyoti Savitribai Phule Maternity Home,"L.B.S, Maruti Mandir Road",40
+Mumbai,R/C,Private,Dr. Ajmera Hospital,SV Road,18
+Mumbai,R/C,Private,Dr. Patel Nursing Home,"Mhatre Wadi, Borivali West",16
+Mumbai,R/C,Private,Aanand Nursing Home,"Near Sona Theater, Borivali",20
+Mumbai,R/C,Private,Purnima Hospital,"Daulat Nagar, Borivali",16
+Mumbai,R/C,Private,Mata Balak Maternity Home,"Siddharth Nagar, Kandivali",70
+Mumbai,S,Municipal,Savitribai Phule Maternity Home,"Maruti Mandir Rd, Bhandup",40
+Mumbai,S,Municipal,Ambedkar Maternity Home,"Tagore Nagar, Vikhroli",24
+Mumbai,S,Municipal,Jyotiba Phule General Hospital,"Kannamwar Nagar II, Vikhroli",110
+Mumbai,S,Private,L.B.S Maternity Home,"Dina Bama Estate, Bhandup",10
+Mumbai,S,Private,Fortis Hospital,"Nahur West, Industrial Area, Bhandup West",440
+Mumbai,S,Private,Madhu Polyclinic and Nursing Home,"Sarvodaya Nagar, Bhandup West",18
+Mumbai,S,Private,Central Health Home Hospital,"Dreams Building, Bhandup",16
+Mumbai,S,Private,Dr. Malwankar Romeen Nursing Home,"Gamdevi Road, Bhandup West",16
+Mumbai,S,Private,Gaurav Maternity and Surgical Hospital,"Jaydev Singh Nagar, Bhandup West",17
+Mumbai,S,Private,Dr Badwaik Hospital,"Bhandup Village Rd, Nahur West",28
+Mumbai,S,Private,Powai Polyclinic and Hospital,"Near South Indian Bank, Powai",25
+Mumbai,T,Municipal,Agarwal Municipal General Hospital,Panch Rasta-Mulund West,110
+Mumbai,T,Municipal,Veer Savarkar Hospital,"Hanuman Chowk, Mulund East",105
+Mumbai,T,Govt,ESIS Hospital,Mulund,400
+Mumbai,T,Private,Heera Monghi Hospital,"Near Kalidas Natya Gruh, Mulund West,",120
+Mumbai,T,Private,Dhanvantari Hospital,"Siddharth Nagar, Mulund West",28
+Mumbai,T,Private,Sushrusha Hospital,"Shreenat Plaza L.T Road, Mulund East",20
