@@ -17,8 +17,8 @@ frontend/dist/
 frontend/.vite/
 
 # Data files (reproducible — not committed)
-data/synthetic/
-data/processed/
+# data/synthetic/
+# data/processed/
 data/exports/
 
 # PDF reports
