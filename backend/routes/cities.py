@@ -31,6 +31,61 @@ router = APIRouter()
 PROCESSED_DIR = os.path.join(PROJECT_ROOT, "data", "processed")
 
 
+def _build_synthetic_hyderabad_annual(city_row: pd.Series) -> list[dict[str, Any]]:
+    """Builds deterministic synthetic annual births/deaths records for Hyderabad."""
+    years = [2020, 2021, 2022, 2023, 2024]
+    base_deaths = 45200
+    base_births = 75200
+    base_death_rate = float(city_row["crude_death_rate"])
+
+    records = []
+    for idx, year in enumerate(years):
+        deaths = int(round(base_deaths * (1 + 0.018 * idx)))
+        births = int(round(base_births * (1 + 0.021 * idx)))
+
+        record = {
+            "year": year,
+            "total_births": births,
+            "total_deaths": deaths,
+            "births_male": int(round(births * 0.515)),
+            "births_female": int(round(births * 0.485)),
+            "deaths_male": int(round(deaths * 0.535)),
+            "deaths_female": int(round(deaths * 0.465)),
+            "crude_death_rate": round(base_death_rate + (idx * 0.05), 2),
+            "crude_death_rate_per_1000": round(base_death_rate + (idx * 0.05), 2),
+            "crude_birth_rate_per_1000": round(base_death_rate + 8.4 + (idx * 0.08), 2),
+            "infant_mortality": None,
+            "data_source": "Synthetic estimate (UrbanPulse) — no official Hyderabad annual source in dataset",
+        }
+        records.append(record)
+
+    return records
+
+
+def _build_synthetic_hyderabad_hospital(city_row: pd.Series) -> dict[str, Any]:
+    """Builds deterministic synthetic hospital/facility counts for Hyderabad."""
+    estimated_population_lakh = 105
+    beds_per_lakh = float(city_row["hospital_beds_per_lakh"])
+    centres_per_lakh = float(city_row["health_centres_per_lakh"])
+
+    total_beds = int(round(beds_per_lakh * estimated_population_lakh))
+    total_facilities = max(1, int(round(centres_per_lakh * estimated_population_lakh)))
+    public_count = int(round(total_facilities * 0.37))
+    private_count = max(0, total_facilities - public_count)
+
+    return {
+        "total_facilities": total_facilities,
+        "total_beds": total_beds,
+        "has_bed_data": True,
+        "public_count": public_count,
+        "private_count": private_count,
+        "data_source": "Synthetic estimate (UrbanPulse)",
+        "data_confidence": 0.45,
+        "hospital_beds_per_lakh": beds_per_lakh,
+        "health_centres_per_lakh": centres_per_lakh,
+    }
+
+
 def _get_city_df(request: Request) -> pd.DataFrame:
     """Pulls city_df from app.state; raises 503 if not loaded."""
     city_df = request.app.state.city_df
@@ -209,6 +264,8 @@ def get_city_health(
         .all()
     )
 
+    has_real_annual = len(health_rows) > 0
+
     health_data = [
         {
             "year": r.year,
@@ -227,12 +284,17 @@ def get_city_health(
         for r in health_rows
     ]
 
+    if not health_data and canonical_name == "Hyderabad":
+        health_data = _build_synthetic_hyderabad_annual(city_row)
+
     # Hospital / facility counts
     hospital_row = (
         db.query(CityHospitalCount)
         .filter(CityHospitalCount.city_name == canonical_name)
         .first()
     )
+
+    has_real_hospital = hospital_row is not None
 
     hospital_data = None
     if hospital_row:
@@ -248,12 +310,16 @@ def get_city_health(
             "health_centres_per_lakh": float(city_row["health_centres_per_lakh"]),
         }
 
+    if hospital_data is None and canonical_name == "Hyderabad":
+        hospital_data = _build_synthetic_hyderabad_hospital(city_row)
+
     return {
         "city_name": canonical_name,
         "annual_health_data": {
             "years_available": len(health_data),
             "data_source_note": (
-                "Real government data" if health_data else
+                "Real government data" if has_real_annual else
+                "Synthetic estimate for Hyderabad (no official annual source in current dataset)" if canonical_name == "Hyderabad" else
                 "No real annual data available for this city — "
                 "crude_death_rate in city profile is a synthetic estimate"
             ),
@@ -261,7 +327,8 @@ def get_city_health(
         },
         "hospital_data": {
             "data_source_note": (
-                "Real government data" if hospital_data else
+                "Real government data" if has_real_hospital else
+                "Synthetic estimate for Hyderabad (no official facility source in current dataset)" if canonical_name == "Hyderabad" else
                 "No real facility data available for this city — "
                 "hospital_beds_per_lakh in city profile is a manual estimate"
             ),

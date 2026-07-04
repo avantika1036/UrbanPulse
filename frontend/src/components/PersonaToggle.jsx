@@ -1,3 +1,4 @@
+import React from "react";
 import { THEME, personaColor } from "../styles/theme.js";
 
 const PERSONAS = [

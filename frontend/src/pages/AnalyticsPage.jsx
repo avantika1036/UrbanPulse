@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getAnalyticsOverview, getMonthlyTrends } from "../api/client.js";
 import { THEME, scoreColor, cityColor } from "../styles/theme.js";
 import PersonaToggle from "../components/PersonaToggle.jsx";

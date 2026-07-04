@@ -52,8 +52,12 @@ api.interceptors.response.use(
     return response.data;
   },
   (error) => {
-    const status = error.response?.status;
+    const status = error.response?.status ?? "NETWORK";
+    const isNetworkError = !error.response && !!error.request;
     const detail =
+      (isNetworkError
+        ? `Cannot reach API at ${BASE_URL}. Start backend server on port 8000 or set VITE_API_URL.`
+        : null) ||
       error.response?.data?.detail ||
       error.response?.data?.message ||
       error.message ||
@@ -203,7 +207,16 @@ export async function getBestCity(payload) {
  * @returns {Promise<Object>} NarrativeResponse
  */
 export async function getNarrative(payload) {
-  return api.post("/narrate/", payload);
+  try {
+    // Current backend route
+    return await api.post("/narrate/relocation", payload);
+  } catch (err) {
+    // Backward compatibility for older backend snapshots
+    if (err?.status === 404) {
+      return api.post("/narrate/", payload);
+    }
+    throw err;
+  }
 }
 
 export default api;

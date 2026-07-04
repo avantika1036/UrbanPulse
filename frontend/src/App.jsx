@@ -229,7 +229,12 @@ function AppLayout({ children }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter
+      future={{
+        v7_relativeSplatPath: true,
+        v7_startTransition: true,
+      }}
+    >
       <ErrorBoundary>
         <AppLayout>
           <Suspense fallback={<PageLoader />}>

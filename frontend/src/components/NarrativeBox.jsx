@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { getNarrative } from "../api/client.js";
 import { THEME } from "../styles/theme.js";
 

@@ -40,7 +40,7 @@ from scoring import (
 logger = logging.getLogger("urbanpulse.narrate")
 router = APIRouter()
 
-GEMINI_TIMEOUT_SECONDS = 30
+GEMINI_TIMEOUT_SECONDS = 60
 
 # Thread pool for running the synchronous Gemini SDK call without blocking
 # the FastAPI event loop. Single worker is sufficient since Gemini calls

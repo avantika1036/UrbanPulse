@@ -1,3 +1,4 @@
+import React from "react";
 import { THEME, scoreColor, cityColor } from "../styles/theme.js";
 
 const DIMENSION_LABELS = {

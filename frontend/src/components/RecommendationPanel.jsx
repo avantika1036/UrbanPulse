@@ -1,3 +1,4 @@
+import React from "react";
 import { THEME, cityColor, personaColor, scoreColor } from "../styles/theme.js";
 
 const PERSONA_LABELS = {

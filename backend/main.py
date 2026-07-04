@@ -29,22 +29,16 @@ import pandas as pd
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from dotenv import load_dotenv
-load_dotenv(dotenv_path=os.path.join(PROJECT_ROOT, ".env"))
-
 # Add backend/ directory to path so siblings import cleanly
 BACKEND_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(BACKEND_DIR)
 sys.path.insert(0, BACKEND_DIR)
 sys.path.insert(0, PROJECT_ROOT)
 
-from routes import cities, compare, analytics, recommendations, narrate
+from dotenv import load_dotenv
+load_dotenv(dotenv_path=os.path.join(PROJECT_ROOT, ".env"))
 
-app.include_router(cities.router,           prefix="/cities",          tags=["Cities"])
-app.include_router(compare.router,          prefix="/compare",         tags=["Compare"])
-app.include_router(analytics.router,        prefix="/analytics",       tags=["Analytics"])
-app.include_router(recommendations.router,  prefix="/recommendations", tags=["Recommendations"])
-app.include_router(narrate.router,          prefix="/narrate",         tags=["GenAI"])
+from routes import cities, compare, analytics, recommendations, narrate, reports
 
 # ── LOGGING ──────────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -124,12 +118,21 @@ async def lifespan(app: FastAPI):
         app.state.salary_feature_encoders = None
         app.state.salary_feature_columns = None
     else:
-        with open(SALARY_EQUIVALENCE_PATH, "rb") as f:
-            salary_payload = pickle.load(f)
-        app.state.salary_equivalence_model = salary_payload["model"]
-        app.state.salary_feature_encoders = salary_payload["feature_encoders"]
-        app.state.salary_feature_columns = salary_payload["feature_columns"]
-        logger.info("Loaded salary_equivalence.pkl")
+        try:
+            with open(SALARY_EQUIVALENCE_PATH, "rb") as f:
+                salary_payload = pickle.load(f)
+            app.state.salary_equivalence_model = salary_payload["model"]
+            app.state.salary_feature_encoders = salary_payload["feature_encoders"]
+            app.state.salary_feature_columns = salary_payload["feature_columns"]
+            logger.info("Loaded salary_equivalence.pkl")
+        except Exception as e:
+            logger.warning(
+                f"salary_equivalence.pkl could not be loaded (corrupted or version mismatch): {e}. "
+                f"Salary endpoints will be disabled."
+            )
+            app.state.salary_equivalence_model = None
+            app.state.salary_feature_encoders = None
+            app.state.salary_feature_columns = None
 
     logger.info("UrbanPulse API startup complete.")
 

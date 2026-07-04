@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { getCityHealth } from "../api/client.js";
 import { THEME, cityColor } from "../styles/theme.js";
 import TrendChart from "../components/TrendChart.jsx";
@@ -74,7 +74,6 @@ function KpiCard({ label, value, subLabel, isReal = true }) {
             fontSize: THEME.fontSizes.xs,
             color: THEME.colors.textFaint,
             fontFamily: THEME.fonts.body,
-            marginTop: THEME.spacing.xs,
             margin: 0,
             marginTop: "6px",
           }}
@@ -374,7 +373,7 @@ export default function HealthDataPage() {
             >
               Annual Births & Deaths
             </h2>
-            {!hasRealBD && (
+            {!hasRealBD && chartData.length > 0 && (
               <div
                 style={{
                   backgroundColor: `${THEME.colors.warning}15`,
@@ -427,11 +426,20 @@ export default function HealthDataPage() {
                   fontFamily: THEME.fonts.body,
                 }}
               >
-                No annual health records available for {selectedCity}. Run{" "}
-                <code style={{ fontFamily: THEME.fonts.mono }}>
-                  scripts/load_database.py
-                </code>{" "}
-                to populate data.
+                {selectedCity === "Hyderabad" ? (
+                  <>
+                    No real annual births/deaths records are available for Hyderabad.
+                    This city currently shows synthetic estimates only.
+                  </>
+                ) : (
+                  <>
+                    No annual health records available for {selectedCity}. Run{" "}
+                    <code style={{ fontFamily: THEME.fonts.mono }}>
+                      scripts/load_database.py
+                    </code>{" "}
+                    to populate data.
+                  </>
+                )}
               </div>
             )}
           </section>

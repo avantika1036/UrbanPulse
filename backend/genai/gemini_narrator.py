@@ -36,7 +36,7 @@ logger = logging.getLogger("urbanpulse.gemini")
 # ── GEMINI SETUP ─────────────────────────────────────────────────────────────
 
 GEMINI_API_KEY: Optional[str] = os.environ.get("GEMINI_API_KEY")
-GEMINI_MODEL = "gemini-1.5-flash"
+GEMINI_MODEL = "gemini-2.5-flash"
 GEMINI_AVAILABLE = False
 
 try:
@@ -154,36 +154,15 @@ Score breakdown (all scores normalised 0–100 relative to compared cities):
 
 ===== WRITING INSTRUCTIONS =====
 
-Write exactly 3 paragraphs. Do not add headers, bullet points, or any \
-formatting — plain prose only.
+Write a 3-paragraph narrative explaining the city recommendation. Use plain prose with no headers or bullet points. Separate paragraphs with blank lines.
 
-PARAGRAPH 1 (Why {recommended} wins):
-Explain clearly why {recommended} is the top recommendation for this persona. \
-Reference specific scores from the data above (e.g. "career_growth_score of XX.X", \
-"affordability_score of XX.X"). Explain what those scores mean in practical terms \
-for this persona's priorities. If salary equivalence data is present, include the \
-most relevant figure.
+Paragraph 1: Explain why {recommended} is the top recommendation for this persona. Reference specific scores from the data (e.g. "career_growth_score of XX.X", "affordability_score of XX.X") and explain what they mean for this persona's priorities. Include salary equivalence data if available.
 
-PARAGRAPH 2 (Trade-offs across compared cities):
-Discuss the key trade-offs honestly. If another city scores higher on a specific \
-dimension that matters to this persona, acknowledge it and explain why {recommended} \
-still wins overall. Use actual score differences to quantify trade-offs. \
-Reference the healthcare data note if present to add credibility.
+Paragraph 2: Discuss key trade-offs honestly. If another city scores higher on dimensions that matter to this persona, acknowledge it and explain why {recommended} still wins overall. Use score differences to quantify trade-offs. Reference healthcare data if present.
 
-PARAGRAPH 3 (Concrete next step):
-Give the user exactly one concrete, actionable next step they should take within \
-the next 30 days — specific to their persona and the recommended city. This should \
-be practical advice, not generic ("research the city"). Examples: negotiate a \
-specific salary range, visit specific areas for housing, ask the employer a \
-specific question about remote work policy.
+Paragraph 3: Give one concrete, actionable next step the user should take within 30 days, specific to their persona and the recommended city. Make it practical advice (e.g., negotiate a specific salary range, visit specific areas for housing).
 
-TONE REQUIREMENTS:
-- Professional and data-grounded — this is an analyst's recommendation, not a travel blog
-- Confident but balanced — acknowledge real trade-offs
-- Do not use phrases like "Congratulations!", "Amazing!", "Exciting!", or "I hope"
-- Do not start any paragraph with "In conclusion" or "To summarise"
-- Do not say "I" or "we" — write in third person ("For a budget-focused professional...")
-- Each paragraph should be 3–5 sentences long — no more
+Tone: Professional, data-grounded, confident but balanced. Write in third person. Avoid phrases like "Congratulations!", "Amazing!", "I hope". Do not start paragraphs with "In conclusion" or "To summarise".
 """
     return prompt.strip()
 
@@ -352,7 +331,7 @@ def generate_relocation_narrative(city_comparison_data: dict) -> dict:
 
         generation_config = genai.types.GenerationConfig(
             temperature=0.4,  # low temperature = more factual, less creative
-            max_output_tokens=600,
+            max_output_tokens=4096,  # Maximum to ensure complete 3-paragraph narratives
             top_p=0.85,
         )
 
@@ -374,10 +353,19 @@ def generate_relocation_narrative(city_comparison_data: dict) -> dict:
         if not narrative:
             raise ValueError("Gemini returned an empty response.")
 
-        logger.info(
-            f"[gemini_narrator] Narrative generated successfully "
-            f"({len(narrative)} chars) via {GEMINI_MODEL}."
-        )
+        # Log completion reason for debugging
+        if hasattr(response, 'candidates') and response.candidates:
+            finish_reason = response.candidates[0].finish_reason if hasattr(response.candidates[0], 'finish_reason') else 'unknown'
+            logger.info(
+                f"[gemini_narrator] Narrative generated successfully "
+                f"({len(narrative)} chars) via {GEMINI_MODEL}. "
+                f"Finish reason: {finish_reason}"
+            )
+        else:
+            logger.info(
+                f"[gemini_narrator] Narrative generated successfully "
+                f"({len(narrative)} chars) via {GEMINI_MODEL}."
+            )
 
         result = {"narrative": narrative, "cached": False, "model": GEMINI_MODEL}
         _NARRATIVE_CACHE[cache_key] = {"narrative": narrative, "model": GEMINI_MODEL}

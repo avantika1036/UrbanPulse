@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import CompareForm from "../components/CompareForm.jsx";
 import CityComparisonTable from "../components/CityComparisonTable.jsx";
 import RecommendationPanel from "../components/RecommendationPanel.jsx";
