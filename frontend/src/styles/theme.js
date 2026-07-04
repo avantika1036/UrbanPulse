@@ -192,13 +192,15 @@ export function scoreColor(score) {
  */
 export function cardStyle(overrides = {}) {
   return {
-    backgroundColor: "rgba(30, 41, 59, 0.65)",
-    backdropFilter: "blur(16px)",
-    WebkitBackdropFilter: "blur(16px)",
+    background: "linear-gradient(145deg, rgba(38, 50, 72, 0.85) 0%, rgba(30, 41, 59, 0.75) 100%)",
+    backdropFilter: "blur(24px)",
+    WebkitBackdropFilter: "blur(24px)",
     border: `1px solid rgba(255, 255, 255, 0.08)`,
+    borderTop: `1px solid rgba(255, 255, 255, 0.15)`,
+    borderLeft: `1px solid rgba(255, 255, 255, 0.1)`,
     borderRadius: THEME.radius.xl,
     padding: THEME.spacing.lg,
-    boxShadow: THEME.shadows.lg,
+    boxShadow: `0 8px 32px rgba(0, 0, 0, 0.3)`,
     transition: THEME.transitions.base,
     ...overrides,
   };

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getCities } from "../api/client.js";
-import { THEME, cityColor, primaryButtonStyle, secondaryButtonStyle } from "../styles/theme.js";
+import { THEME, cityColor, primaryButtonStyle, secondaryButtonStyle, cardStyle } from "../styles/theme.js";
 
 const STATS = [
   { value: "6", label: "Cities Covered" },
@@ -15,12 +15,11 @@ function StatBadge({ value, label }) {
   return (
     <div
       style={{
-        textAlign: "center",
-        padding: `${THEME.spacing.md} ${THEME.spacing.lg}`,
-        backgroundColor: THEME.colors.surface,
-        border: `1px solid ${THEME.colors.border}`,
-        borderRadius: THEME.radius.lg,
-        minWidth: "120px",
+        ...cardStyle({
+          textAlign: "center",
+          padding: `${THEME.spacing.md} ${THEME.spacing.lg}`,
+          minWidth: "120px",
+        })
       }}
     >
       <div
@@ -64,14 +63,17 @@ function CityCard({ city }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        backgroundColor: hovered ? THEME.colors.surface2 : THEME.colors.surface,
-        border: `1px solid ${hovered ? color : THEME.colors.border}`,
-        borderRadius: THEME.radius.lg,
-        padding: THEME.spacing.lg,
-        cursor: "pointer",
-        transition: THEME.transitions.base,
-        transform: hovered ? "translateY(-2px)" : "none",
-        boxShadow: hovered ? THEME.shadows.lg : THEME.shadows.md,
+        ...cardStyle(hovered ? {
+          background: "linear-gradient(145deg, rgba(45, 63, 94, 0.95) 0%, rgba(38, 50, 72, 0.85) 100%)",
+          border: `1px solid ${color}`,
+          borderTop: `1px solid ${color}`,
+          borderLeft: `1px solid ${color}`,
+          transform: "translateY(-4px)",
+          boxShadow: `0 12px 40px ${color}33, inset 0 1px 0 rgba(255,255,255,0.2)`,
+          cursor: "pointer"
+        } : {
+          cursor: "pointer"
+        })
       }}
     >
       <div
@@ -289,11 +291,10 @@ export default function HeroPage() {
               <div
                 key={i}
                 style={{
-                  height: "160px",
-                  backgroundColor: THEME.colors.surface,
-                  border: `1px solid ${THEME.colors.border}`,
-                  borderRadius: THEME.radius.lg,
-                  animation: "pulse 1.5s ease-in-out infinite",
+                  ...cardStyle({
+                    height: "160px",
+                    animation: "pulse 1.5s ease-in-out infinite",
+                  })
                 }}
               />
             ))}
