@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getCities } from "../api/client.js";
-import { THEME, cityColor, primaryButtonStyle, secondaryButtonStyle } from "../styles/theme.js";
+import { THEME, cityColor, primaryButtonStyle, secondaryButtonStyle, cardStyle } from "../styles/theme.js";
 
 const STATS = [
   { value: "6", label: "Cities Covered" },
@@ -15,12 +15,10 @@ function StatBadge({ value, label }) {
   return (
     <div
       style={{
+        ...cardStyle(),
         textAlign: "center",
-        padding: `${THEME.spacing.md} ${THEME.spacing.lg}`,
-        backgroundColor: THEME.colors.surface,
-        border: `1px solid ${THEME.colors.border}`,
-        borderRadius: THEME.radius.lg,
-        minWidth: "120px",
+        padding: `${THEME.spacing.lg} ${THEME.spacing.xl}`,
+        minWidth: "160px",
       }}
     >
       <div
@@ -64,14 +62,12 @@ function CityCard({ city }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        backgroundColor: hovered ? THEME.colors.surface2 : THEME.colors.surface,
-        border: `1px solid ${hovered ? color : THEME.colors.border}`,
-        borderRadius: THEME.radius.lg,
-        padding: THEME.spacing.lg,
+        ...cardStyle(),
+        backgroundColor: hovered ? "rgba(45, 63, 94, 0.85)" : "rgba(30, 41, 59, 0.65)",
+        borderColor: hovered ? color : "rgba(255, 255, 255, 0.08)",
         cursor: "pointer",
-        transition: THEME.transitions.base,
-        transform: hovered ? "translateY(-2px)" : "none",
-        boxShadow: hovered ? THEME.shadows.lg : THEME.shadows.md,
+        transform: hovered ? "translateY(-4px)" : "none",
+        boxShadow: hovered ? `0 12px 40px ${color}33` : THEME.shadows.lg,
       }}
     >
       <div
@@ -117,29 +113,35 @@ function CityCard({ city }) {
         />
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: THEME.spacing.sm }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: THEME.spacing.md, marginTop: THEME.spacing.md }}>
         {[
           { label: "Avg 1BHK Rent", value: `₹${(city.avg_monthly_rent_1bhk / 1000).toFixed(0)}k/mo` },
           { label: "Fresher Salary", value: `₹${(city.avg_salary_fresher / 100000).toFixed(1)}L/yr` },
           { label: "CoL Index", value: city.cost_of_living_index?.toFixed(0) },
           { label: "Avg AQI", value: city.pollution_aqi_avg?.toFixed(0) },
         ].map(({ label, value }) => (
-          <div key={label}>
+          <div key={label} style={{
+            backgroundColor: "rgba(0,0,0,0.2)",
+            padding: THEME.spacing.sm,
+            borderRadius: THEME.radius.md,
+            border: "1px solid rgba(255,255,255,0.03)"
+          }}>
             <p
               style={{
-                fontSize: "10px",
+                fontSize: THEME.fontSizes.xs,
                 color: THEME.colors.textFaint,
                 fontFamily: THEME.fonts.body,
                 margin: 0,
                 textTransform: "uppercase",
                 letterSpacing: "0.05em",
+                marginBottom: "4px",
               }}
             >
               {label}
             </p>
             <p
               style={{
-                fontSize: THEME.fontSizes.sm,
+                fontSize: THEME.fontSizes.md,
                 fontWeight: THEME.fontWeights.semibold,
                 color: THEME.colors.text,
                 fontFamily: THEME.fonts.mono,

@@ -87,9 +87,10 @@ export const THEME = {
   shadows: {
     sm: "0 1px 3px rgba(0, 0, 0, 0.4)",
     md: "0 4px 12px rgba(0, 0, 0, 0.5)",
-    lg: "0 8px 32px rgba(0, 0, 0, 0.6)",
+    lg: "0 12px 40px rgba(0, 0, 0, 0.7)",
     accent: "0 0 0 3px rgba(59, 130, 246, 0.25)",
     inset: "inset 0 1px 3px rgba(0, 0, 0, 0.3)",
+    glow: "0 0 15px rgba(59, 130, 246, 0.4)",
   },
 
   // ── TYPOGRAPHY ────────────────────────────────────────────────────────
@@ -99,14 +100,14 @@ export const THEME = {
   },
 
   fontSizes: {
-    xs: "11px",
-    sm: "13px",
-    md: "15px",
-    lg: "17px",
-    xl: "20px",
-    xxl: "26px",
-    xxxl: "34px",
-    display: "48px",
+    xs: "14px",
+    sm: "16px",
+    md: "18px",
+    lg: "20px",
+    xl: "24px",
+    xxl: "32px",
+    xxxl: "40px",
+    display: "56px",
   },
 
   fontWeights: {
@@ -191,11 +192,14 @@ export function scoreColor(score) {
  */
 export function cardStyle(overrides = {}) {
   return {
-    backgroundColor: THEME.colors.surface,
-    border: `1px solid ${THEME.colors.border}`,
-    borderRadius: THEME.radius.lg,
+    backgroundColor: "rgba(30, 41, 59, 0.65)",
+    backdropFilter: "blur(16px)",
+    WebkitBackdropFilter: "blur(16px)",
+    border: `1px solid rgba(255, 255, 255, 0.08)`,
+    borderRadius: THEME.radius.xl,
     padding: THEME.spacing.lg,
-    boxShadow: THEME.shadows.md,
+    boxShadow: THEME.shadows.lg,
+    transition: THEME.transitions.base,
     ...overrides,
   };
 }
@@ -207,7 +211,7 @@ export function cardStyle(overrides = {}) {
  */
 export function primaryButtonStyle(disabled = false) {
   return {
-    backgroundColor: disabled ? THEME.colors.borderLight : THEME.colors.accent,
+    background: disabled ? THEME.colors.borderLight : `linear-gradient(135deg, ${THEME.colors.accentHover}, ${THEME.colors.accent})`,
     color: THEME.colors.white,
     border: "none",
     borderRadius: THEME.radius.md,
@@ -219,6 +223,7 @@ export function primaryButtonStyle(disabled = false) {
     transition: THEME.transitions.base,
     opacity: disabled ? 0.5 : 1,
     letterSpacing: "0.01em",
+    boxShadow: disabled ? "none" : THEME.shadows.glow,
   };
 }
 

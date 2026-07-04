@@ -8,10 +8,6 @@ env/
 .env
 *.env
 
-# ML Models
-models/*.pkl
-models/*.joblib
-
 # Node / Frontend
 node_modules/
 frontend/node_modules/
