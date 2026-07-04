@@ -77,35 +77,9 @@ All scores are normalised relative to the cities you are comparing — not again
 
 ## Architecture
 
-```text
-┌─────────────────────────────────────────────────────────────┐
-│  REAL DATA (8 government CSVs)  +  SYNTHETIC DATA (seed=42) │
-└────────────────────────┬────────────────────────────────────┘
-                         │
-              ETL Scripts (load_real_data.py
-              parse_pune_kra.py + generate_synthetic_data.py)
-                         │
-                         ▼
-┌─────────────────────────────────────────────────────────────┐
-│              PostgreSQL  (9 tables, ~61k rows)              │
-└───────────────┬─────────────────────────┬───────────────────┘
-                │                         │
-         scoring.py                  ML Training
-         (7 dimensions,          RandomForest → city_recommender.pkl
-          3 personas)            GBR → salary_equivalence.pkl
-                │                         │
-                └──────────┬──────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────┐
-│              FastAPI Backend  (port 8000)                   │
-│    /cities  /compare  /analytics  /recommendations  /narrate│
-│              + Gemini 1.5-flash narrative layer             │
-└──────────────────┬──────────────────────┬───────────────────┘
-                   │                      │
-            React Frontend          Exports & Reports
-            (port 5173)        Tableau CSVs · PDF · Insights
-```
+<div style="text-align:center;">
+  <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9e85ea91-5556-449b-9383-d1a6509d01dd" />
+</div>
 
 ---
 
