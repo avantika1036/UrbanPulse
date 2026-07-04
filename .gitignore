@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+env/
+.venv/
+.env
+*.env
+
+# ML Models
+models/*.pkl
+models/*.joblib
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+frontend/.vite/
+
+# Data files (reproducible — not committed)
+data/synthetic/
+data/processed/
+data/exports/
+
+# PDF reports
+reports/output/*.pdf
+!reports/output/.gitkeep
+
+# Database
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
