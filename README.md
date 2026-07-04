@@ -30,14 +30,14 @@ It uses **real government data** from BBMP, BMC, GCC, PMC, and the Delhi State H
 
 | Feature | Description |
 |---|---|
-| 🎯 **Persona-Driven Scoring** | Weights shift based on who you are — early career, family-focused, or budget-first |
-| 💰 **Salary Equivalence** | See what you need to earn in City B to match your lifestyle in City A |
-| 🤖 **ML Recommendation** | RandomForest model predicts your best-fit city from your profile |
-| 🧠 **AI Narrative** | Google Gemini writes a plain-English explanation of the recommendation |
-| 📊 **Real Health Data** | Actual hospital records and birth/death statistics from 5 cities |
-| 📈 **Trend Charts** | 24 months of AQI, rent, salary, and hospital utilization data |
-| 📋 **PDF Reports** | Downloadable 7-section comparison report with scores and AI analysis |
-| 📤 **Tableau Exports** | 6 analytics-ready CSVs + auto-generated data insights |
+| **Persona-Driven Scoring** | Weights shift based on who you are — early career, family-focused, or budget-first |
+| **Salary Equivalence** | See what you need to earn in City B to match your lifestyle in City A |
+| **ML Recommendation** | RandomForest model predicts your best-fit city from your profile |
+| **AI Narrative** | Google Gemini writes a plain-English explanation of the recommendation |
+| **Real Health Data** | Actual hospital records and birth/death statistics from 5 cities |
+| **Trend Charts** | 24 months of AQI, rent, salary, and hospital utilization data |
+| **PDF Reports** | Downloadable 7-section comparison report with scores and AI analysis |
+| **Tableau Exports** | 6 analytics-ready CSVs + auto-generated data insights |
 
 ---
 
@@ -45,12 +45,12 @@ It uses **real government data** from BBMP, BMC, GCC, PMC, and the Delhi State H
 
 | City | Real Health Data | Real Hospital Data |
 |---|---|---|
-| 🔴 Mumbai | ⚠️ Synthetic (Estimated) | ✅ Yes (288 BMC hospitals with bed counts) |
-| 🟠 Bengaluru | ✅ Yes (2001–2024 BBMP) | ✅ Yes (32 BBMP health centres) |
-| 🟡 Chennai | ✅ Yes (2018–2025 GCC) | ✅ Yes (16 UCHCs) |
-| 🟢 Pune | ✅ Yes (1975–2018 PMC) | ⚠️ Synthetic (Estimated) |
-| 🔵 Delhi | ✅ Yes (2017–2024 State Health Dept) | ⚠️ Synthetic (Estimated) |
-| 🟣 Hyderabad | ⚠️ Synthetic (Estimated) | ⚠️ Synthetic (Estimated) |
+| Mumbai | Synthetic (Estimated) | Yes (288 BMC hospitals with bed counts) |
+| Bengaluru | Yes (2001–2024 BBMP) | Yes (32 BBMP health centres) |
+| Chennai | Yes (2018–2025 GCC) | Yes (16 UCHCs) |
+| Pune | Yes (1975–2018 PMC) | Synthetic (Estimated) |
+| Delhi | Yes (2017–2024 State Health Dept) | Synthetic (Estimated) |
+| Hyderabad | Synthetic (Estimated) | Synthetic (Estimated) |
 
 ---
 
