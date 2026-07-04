@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="UrbanPulse — Salary-adjusted city comparison and relocation intelligence for India's mobile workforce." />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="UrbanPulse" />
+    <meta property="og:description" content="Compare Mumbai, Bengaluru, Chennai, Pune, Delhi & Hyderabad — salary-adjusted, persona-driven." />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>UrbanPulse</title>
+
+    <!-- Preconnect to Google Fonts for IBM Plex Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Minimal global resets — all component styling via inline styles in theme.js */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        background-color: #0f172a;
+        color: #f1f5f9;
+        font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      #root {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Scrollbar styling — minimal, dark-themed */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+      }
+
+      /* Focus ring for accessibility */
+      :focus-visible {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        cursor: pointer;
+        font-family: inherit;
+      }
+
+      input,
+      select,
+      textarea {
+        font-family: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
