@@ -46,11 +46,11 @@ It uses **real government data** from BBMP, BMC, GCC, PMC, and the Delhi State H
 | City | Real Health Data | Real Hospital Data |
 |---|---|---|
 | 🔴 Mumbai | ⚠️ Synthetic (Estimated) | ✅ Yes (288 BMC hospitals with bed counts) |
-| 🔵 Bengaluru | ✅ Yes (2001–2024 BBMP) | ✅ Yes (32 BBMP health centres) |
-| 🟢 Chennai | ✅ Yes (2018–2025 GCC) | ✅ Yes (16 UCHCs) |
-| 🟡 Pune | ✅ Yes (1975–2018 PMC) | ⚠️ Synthetic (Estimated) |
-| 🟠 Delhi | ✅ Yes (2017–2024 State Health Dept) | ⚠️ Synthetic (Estimated) |
-| ⬛ Hyderabad | ⚠️ Synthetic (Estimated) | ⚠️ Synthetic (Estimated) |
+| 🟠 Bengaluru | ✅ Yes (2001–2024 BBMP) | ✅ Yes (32 BBMP health centres) |
+| 🟡 Chennai | ✅ Yes (2018–2025 GCC) | ✅ Yes (16 UCHCs) |
+| 🟢 Pune | ✅ Yes (1975–2018 PMC) | ⚠️ Synthetic (Estimated) |
+| 🔵 Delhi | ✅ Yes (2017–2024 State Health Dept) | ⚠️ Synthetic (Estimated) |
+| 🟣 Hyderabad | ⚠️ Synthetic (Estimated) | ⚠️ Synthetic (Estimated) |
 
 ---
 
