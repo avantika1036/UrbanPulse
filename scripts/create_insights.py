@@ -82,8 +82,9 @@ def generate_insights() -> list[str]:
     try:
         mumbai_health = health[health["city_name"] == "Mumbai"]
         mumbai_scores = scores[(scores["city_name"] == "Mumbai") & (scores["persona"] == "family_focused")]
-        if not mumbai_scores.empty and "hospital_beds_per_lakh" in health.columns:
-            beds = round(float(mumbai_health["hospital_beds_per_lakh"].dropna().iloc[0]), 1)
+        beds_series = mumbai_health["hospital_beds_per_lakh"].dropna()
+        if not mumbai_scores.empty and not beds_series.empty:
+            beds = round(float(beds_series.iloc[0]), 1)
             hc_score = round(float(mumbai_scores.iloc[0].get("healthcare_score", 0)), 1)
             insights.append(
                 f"INSIGHT 2: Mumbai's healthcare_score of {hc_score}/100 for the family_focused persona "
@@ -94,6 +95,7 @@ def generate_insights() -> list[str]:
             raise ValueError("Mumbai healthcare data incomplete")
     except Exception as e:
         insights.append(f"INSIGHT 2: [unavailable — {e}]")
+
 
     # ── INSIGHT 3 ─────────────────────────────────────────────────────────────
     # Delhi environment_score and actual AQI
