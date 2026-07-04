@@ -1,0 +1,7 @@
+city_id,city_name,state,region,avg_monthly_rent_1bhk,avg_monthly_rent_2bhk,avg_salary_fresher,avg_salary_3yr_exp,cost_of_living_index,pollution_aqi_avg,green_space_index,public_transport_score,hospital_beds_per_lakh,health_centres_per_lakh,crude_death_rate,school_quality_index,crime_index,tech_job_count_index,startup_ecosystem_score
+1,Mumbai,Maharashtra,West,38000,62000,550000,1250000,100.0,145.0,28.0,78.0,134.72,1.35,5.8,72.0,52.0,78.0,72.0
+2,Bengaluru,Karnataka,South,26000,42000,600000,1450000,85.0,62.0,38.0,48.0,38.0,0.23,5.2,78.0,45.0,98.0,96.0
+3,Chennai,Tamil Nadu,South,17000,28000,480000,1050000,72.0,58.0,22.0,64.0,0.0,0.14,6.4,76.0,40.0,68.0,55.0
+4,Pune,Maharashtra,West,19000,31000,520000,1150000,75.0,78.0,42.0,55.0,42.0,2.5,4.1,80.0,38.0,75.0,68.0
+5,Delhi,Delhi,North,24000,40000,580000,1400000,92.0,215.0,18.0,72.0,55.0,3.2,4.5,70.0,58.0,70.0,65.0
+6,Hyderabad,Telangana,South,18000,29000,560000,1300000,68.0,68.0,30.0,58.0,48.0,2.8,5.0,74.0,42.0,88.0,80.0
