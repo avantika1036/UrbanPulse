@@ -29,13 +29,22 @@ import pandas as pd
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from dotenv import load_dotenv
+load_dotenv(dotenv_path=os.path.join(PROJECT_ROOT, ".env"))
+
 # Add backend/ directory to path so siblings import cleanly
 BACKEND_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(BACKEND_DIR)
 sys.path.insert(0, BACKEND_DIR)
 sys.path.insert(0, PROJECT_ROOT)
 
-from routes import cities, compare, analytics, recommendations
+from routes import cities, compare, analytics, recommendations, narrate
+
+app.include_router(cities.router,           prefix="/cities",          tags=["Cities"])
+app.include_router(compare.router,          prefix="/compare",         tags=["Compare"])
+app.include_router(analytics.router,        prefix="/analytics",       tags=["Analytics"])
+app.include_router(recommendations.router,  prefix="/recommendations", tags=["Recommendations"])
+app.include_router(narrate.router,          prefix="/narrate",         tags=["GenAI"])
 
 # ── LOGGING ──────────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -160,7 +169,7 @@ app.include_router(cities.router, prefix="/cities", tags=["Cities"])
 app.include_router(compare.router, prefix="/compare", tags=["Compare"])
 app.include_router(analytics.router, prefix="/analytics", tags=["Analytics"])
 app.include_router(recommendations.router, prefix="/recommendations", tags=["Recommendations"])
-
+app.include_router(narrate.router, prefix="/narrate", tags=["GenAI"])
 
 # ── HEALTH CHECK ──────────────────────────────────────────────────────────────
 
