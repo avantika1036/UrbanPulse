@@ -52,7 +52,7 @@ export const THEME = {
       Chennai: "#2A9D8F",
       Pune: "#E9C46A",
       Delhi: "#F4A261",
-      Hyderabad: "#264653",
+      Hyderabad: "#A78BFA",  // Changed from dark teal to visible purple
     },
 
     // Persona colors

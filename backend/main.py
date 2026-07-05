@@ -173,6 +173,7 @@ app.include_router(compare.router, prefix="/compare", tags=["Compare"])
 app.include_router(analytics.router, prefix="/analytics", tags=["Analytics"])
 app.include_router(recommendations.router, prefix="/recommendations", tags=["Recommendations"])
 app.include_router(narrate.router, prefix="/narrate", tags=["GenAI"])
+app.include_router(reports.router, prefix="/reports", tags=["Reports"])
 
 # ── HEALTH CHECK ──────────────────────────────────────────────────────────────
 

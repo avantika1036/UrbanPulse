@@ -1,4 +1,6 @@
 city,total_facilities,total_beds,has_bed_data,public_count,private_count,data_source,data_confidence
-Bengaluru,32,0,False,32,0,real,0.8
+Bengaluru,32,393,True,32,0,real,0.8
 Mumbai,288,28696,True,50,238,real,1.0
-Chennai,16,0,False,16,0,real,0.75
+Chennai,16,270,True,16,0,synthetic,0.9
+Pune,30,7880,True,17,13,synthetic,0.7
+Delhi,30,16850,True,24,6,synthetic,0.7

@@ -33,7 +33,7 @@ PROCESSED_DIR = os.path.join(PROJECT_ROOT, "data", "processed")
 
 def _build_synthetic_hyderabad_annual(city_row: pd.Series) -> list[dict[str, Any]]:
     """Builds deterministic synthetic annual births/deaths records for Hyderabad."""
-    years = [2020, 2021, 2022, 2023, 2024]
+    years = [2018, 2019, 2020, 2021, 2022, 2023, 2024]
     base_deaths = 45200
     base_births = 75200
     base_death_rate = float(city_row["crude_death_rate"])
@@ -287,28 +287,28 @@ def get_city_health(
     if not health_data and canonical_name == "Hyderabad":
         health_data = _build_synthetic_hyderabad_annual(city_row)
 
-    # Hospital / facility counts
-    hospital_row = (
-        db.query(CityHospitalCount)
-        .filter(CityHospitalCount.city_name == canonical_name)
-        .first()
-    )
-
-    has_real_hospital = hospital_row is not None
-
+    # Hospital / facility counts - load from CSV instead of DB
+    hospital_counts_path = os.path.join(PROCESSED_DIR, "city_hospital_counts.csv")
     hospital_data = None
-    if hospital_row:
-        hospital_data = {
-            "total_facilities": hospital_row.total_facilities,
-            "total_beds": hospital_row.total_beds,
-            "has_bed_data": hospital_row.has_bed_data,
-            "public_count": hospital_row.public_count,
-            "private_count": hospital_row.private_count,
-            "data_source": hospital_row.data_source,
-            "data_confidence": float(hospital_row.data_confidence),
-            "hospital_beds_per_lakh": float(city_row["hospital_beds_per_lakh"]),
-            "health_centres_per_lakh": float(city_row["health_centres_per_lakh"]),
-        }
+    has_real_hospital = False
+
+    if os.path.exists(hospital_counts_path):
+        hospital_df = pd.read_csv(hospital_counts_path)
+        hospital_row = hospital_df[hospital_df["city"] == canonical_name]
+        if not hospital_row.empty:
+            row = hospital_row.iloc[0]
+            has_real_hospital = True
+            hospital_data = {
+                "total_facilities": int(row["total_facilities"]),
+                "total_beds": int(row["total_beds"]),
+                "has_bed_data": bool(row["has_bed_data"]),
+                "public_count": int(row["public_count"]),
+                "private_count": int(row["private_count"]),
+                "data_source": row["data_source"],
+                "data_confidence": float(row["data_confidence"]),
+                "hospital_beds_per_lakh": float(city_row["hospital_beds_per_lakh"]),
+                "health_centres_per_lakh": float(city_row["health_centres_per_lakh"]),
+            }
 
     if hospital_data is None and canonical_name == "Hyderabad":
         hospital_data = _build_synthetic_hyderabad_hospital(city_row)

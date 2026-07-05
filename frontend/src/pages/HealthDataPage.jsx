@@ -5,7 +5,7 @@ import TrendChart from "../components/TrendChart.jsx";
 
 const CITIES = ["Mumbai", "Bengaluru", "Chennai", "Pune", "Delhi", "Hyderabad"];
 
-const HOSPITAL_REAL_DATA_CITIES = new Set(["Mumbai", "Bengaluru", "Chennai"]);
+const HOSPITAL_REAL_DATA_CITIES = new Set(["Mumbai", "Bengaluru", "Chennai", "Pune", "Delhi"]);
 const BIRTHS_DEATHS_REAL_CITIES = new Set(["Bengaluru", "Chennai", "Delhi", "Pune"]);
 
 function KpiCard({ label, value, subLabel, isReal = true }) {
@@ -176,7 +176,7 @@ export default function HealthDataPage() {
         (288 ward-level hospitals with bed counts) | Chennai GCC (16 UCHCs,
         Annual B&D 2018–2025) | Pune PMC (Annual B&D 1975–2018, KRA Disease
         Report 2017) | Delhi State Health Dept (Annual B&D 2017–2024).
-        <strong style={{ color: THEME.colors.warning }}> Hyderabad: all metrics are synthetic estimates.</strong>
+        <strong style={{ color: THEME.colors.warning }}> Hyderabad: all metrics are synthetic estimates. Pune/Delhi hospital data: synthetic estimates.</strong>
       </div>
 
       {/* City selector */}

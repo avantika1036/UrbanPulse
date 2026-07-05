@@ -1,0 +1,8 @@
+city,year,total_births,total_deaths,births_male,births_female,deaths_male,deaths_female,crude_death_rate,crude_death_rate_per_1000,crude_birth_rate_per_1000,infant_mortality,data_source
+Mumbai,2018,185000,72000,95200,89800,38500,33500,0.389,6.5,16.7,1850,Synthetic estimate (UrbanPulse) — no official Mumbai annual source in dataset
+Mumbai,2019,188000,73500,96500,91500,39200,34300,0.391,6.6,16.8,1900,Synthetic estimate (UrbanPulse) — no official Mumbai annual source in dataset
+Mumbai,2020,175000,85000,89700,85300,45000,40000,0.486,7.8,15.7,2200,Synthetic estimate (UrbanPulse) — no official Mumbai annual source in dataset
+Mumbai,2021,168000,88000,86200,81800,46500,41500,0.524,8.2,15.1,2400,Synthetic estimate (UrbanPulse) — no official Mumbai annual source in dataset
+Mumbai,2022,182000,78000,93500,88500,41000,37000,0.429,7.1,16.4,2100,Synthetic estimate (UrbanPulse) — no official Mumbai annual source in dataset
+Mumbai,2023,190000,75000,97500,92500,39500,35500,0.395,6.7,17.0,1950,Synthetic estimate (UrbanPulse) — no official Mumbai annual source in dataset
+Mumbai,2024,195000,73000,100200,94800,38500,34500,0.375,6.4,17.2,1800,Synthetic estimate (UrbanPulse) — no official Mumbai annual source in dataset
